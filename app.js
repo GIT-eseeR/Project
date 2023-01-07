@@ -6,7 +6,7 @@ const port = process.env.PORT || 5500
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(express.static('public'))
-// //MySQL
+//MySQL
 var connection = mysql.createConnection({
   host     : '',
   user     : 'id18072817_dbproject',
@@ -19,7 +19,6 @@ connection.connect(function(err) {
   }
   console.log('connected as id ' + connection.threadId);
 });
-
 
 //login post data
 app.post('/loginme', (req, res) => {
